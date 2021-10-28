@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<head>
+<title>Калькулятор</title>
+
+</head>
+<body>  
+<div class="calc-body">
+
+    <div class="number-field">
+    <p class="number-saved_data" id="saved-number"></p>
+    <p class="number-saved_data" id="operation"></p>
+    <p class="number-field-text" id="calculation"></p>
+    </div>
+    <div class="buttons-field">
+        <div class="columns first-column">
+            <div class="button button_first_row">
+                <button onclick="buttonPress('OFF')"><p class="button-font">OFF</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('MRC')"><p class="button-font">MRC</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('7')"><p class="button-font">7</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('4')"><p class="button-font">4</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('1')"><p class="button-font">1</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('0')"><p class="button-font">0</p></button>
+            </div>
+        </div>
+        <div class="columns second-column">
+            <div class="button button_first_row">
+                <button onclick="buttonPress('+/-')"><p class="button-font">+&frasl;-</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('M-')"><p class="button-font">M-</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('8')"><p class="button-font">8</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('5')"><p class="button-font">5</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('2')"><p class="button-font">2</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('.')"><p class="button-font">.</p></button>
+            </div>
+        </div>
+        <div class="columns third-column">
+            <div class="button button_first_row">
+                <button onclick="buttonPress('sqrt')"><p class="button-font">&radic;</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('M+')"><p class="button-font">M+</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('9')"><p class="button-font">9</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('6')"><p class="button-font">6</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('3')"><p class="button-font">3</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('=')"><p class="button-font">=</p></button>
+            </div>
+        </div>
+        <div class="columns fourd-column">
+            <div class="button button_first_row">
+                <button onclick="buttonPress('%')"><p class="button-font">%</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('/')"><p class="button-font">/</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('*')"><p class="button-font">x</p></button>
+            </div>
+            <div class="button">
+                <button onclick="buttonPress('-')"><p class="button-font">-</p></button>
+            </div>
+            <div class="button button_plus">
+                <button onclick="buttonPress('+')" class="active-button-plus"><p class="button-font">+</p></button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+<footer>
+
+</footer>
+</html>

@@ -1,0 +1,78 @@
+
+.calc-body{
+    width: 390px;
+    height: 500px;
+    background:linear-gradient(180deg, #4EA4DC 51.6%, #081925 161.2%);
+    border: 1px soild black;
+    border-radius: 10px;
+    outline: 1px solid black; 
+    padding-top: 60px;
+}
+.number-field{
+    width: 90%;
+    height: 75px;
+    background: #DFE3D8 ;
+    border-radius: 10px;
+    outline: 2px solid black;
+    margin-left: auto; margin-right: auto;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.button{
+    width: 70px;
+    height: 50px;
+    background: #4EA4DC;
+    border: 1px soild black;
+    border-radius: 5px;
+    outline: 1px solid black; 
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.buttons-field{  
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+
+}
+.columns{
+    display: flex;
+    flex-direction: column;
+}
+.button_plus{
+    height: 110px;
+}
+.button_first_row{
+    height: 35px;
+}
+.button-font{
+    margin: 0px;
+    font-family:monospace;
+    color: white;
+    font-size: 29px;
+    font-weight: bold;
+}
+button{
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.number-field-text{
+    margin: 0px;
+    font-family: monospace;
+    font-size: 40px;
+    font-weight: bold;  
+}
+.number-saved_data{
+    margin: 0px;
+    margin-left: 10px;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;  
+}
+.active-button-plus{
+    height: 100px;
+}
