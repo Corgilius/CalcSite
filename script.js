@@ -1,4 +1,4 @@
-let result = 0;
+let result = 0; let workingSwitch = 0;
 document.addEventListener('keypress', (event) => {
     const keyName = event.key;
     if (keyName === "Enter"){
@@ -9,68 +9,80 @@ document.addEventListener('keypress', (event) => {
     }
   });
 function buttonPress(value) {
-    switch(value){
-        case "OFF":
-            break;
-        case "MRC":
-            document.getElementById("calculation").innerHTML = "";
-            document.getElementById("saved-number").innerHTML = "";
-            document.getElementById("operation").innerHTML = "";
-            break;
-        case "+":
-            operationFunction("+");
-            break;
-        case "-":
-            operationFunction("-");
-            break;
-        case "*":
-            if ( document.getElementById("calculation").innerHTML.length != "" || document.getElementById("saved-number").innerHTML.length != "") {
-                operationFunction("*");
-            }
-            break;
-        case "sqrt":
-            sqrtFunction(document.getElementById("calculation").innerHTML);
-            break;
-        case "=":
-            equalFunction();
-            break;
-        case "/":
-            if ( document.getElementById("calculation").innerHTML.length != "" || document.getElementById("saved-number").innerHTML.length != "") {
-                operationFunction("/");
-            }
-            break;
-        case "%":
-            if (document.getElementById("saved-number").innerHTML != ""){
-                percentageFunction(document.getElementById("calculation").innerHTML,document.getElementById("saved-number").innerHTML);
-            }
-            break;
-        case "+/-":
-            if (document.getElementById("calculation").innerHTML != ""){
-                negativeFunction();
-            }
-            break;
-        case ".":
-            if (document.getElementById("calculation").innerHTML != "" && !document.getElementById("calculation").innerHTML.includes(".") ){
-                document.getElementById("calculation").innerHTML += "."
-            }
-            break;
-        case "1":
-        case "2":
-        case "3":
-        case "4":
-        case "5":
-        case "6":
-        case "7":
-        case "8":
-        case "9":
-        case "0":
-            if (document.getElementById("calculation").innerHTML.length <= 8){
-                document.getElementById("calculation").innerHTML += value; 
-            }
-            else (alert("Число слишком большое!"));
-            break;
+    if (workingSwitch == 0){
+        if (value == "OFF"){
+            workingSwitch = 1;
+            alert("Калькулятор включен.")
+        }
     }
-    
+    else{
+        switch(value){
+            case "OFF":
+                workingSwitch = 0;
+                alert("Калькулятор выключен.");
+                document.getElementById("calculation").innerHTML = "";
+                document.getElementById("saved-number").innerHTML = "";
+                document.getElementById("operation").innerHTML = "";
+                break;
+            case "MRC":
+                document.getElementById("calculation").innerHTML = "";
+                document.getElementById("saved-number").innerHTML = "";
+                document.getElementById("operation").innerHTML = "";
+                break;
+            case "+":
+                operationFunction("+");
+                break;
+            case "-":
+                operationFunction("-");
+                break;
+            case "*":
+                if ( document.getElementById("calculation").innerHTML.length != "" || document.getElementById("saved-number").innerHTML.length != "") {
+                    operationFunction("*");
+                }
+                break;
+            case "sqrt":
+                sqrtFunction(document.getElementById("calculation").innerHTML);
+                break;
+            case "=":
+                equalFunction();
+                break;
+            case "/":
+                if ( document.getElementById("calculation").innerHTML.length != "" || document.getElementById("saved-number").innerHTML.length != "") {
+                    operationFunction("/");
+                }
+                break;
+            case "%":
+                if (document.getElementById("saved-number").innerHTML != ""){
+                    percentageFunction(document.getElementById("calculation").innerHTML,document.getElementById("saved-number").innerHTML);
+                }
+                break;
+            case "+/-":
+                if (document.getElementById("calculation").innerHTML != ""){
+                    negativeFunction();
+                }
+                break;
+            case ".":
+                if (document.getElementById("calculation").innerHTML != "" && !document.getElementById("calculation").innerHTML.includes(".") ){
+                    document.getElementById("calculation").innerHTML += "."
+                }
+                break;
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+            case "9":
+            case "0":
+                if (document.getElementById("calculation").innerHTML.length <= 8){
+                    document.getElementById("calculation").innerHTML += value; 
+                }
+                else (alert("Число слишком большое!"));
+                break;
+        }
+    }    
 }
 function simpleOperation(_value,_value2,operation){
             switch (operation){
